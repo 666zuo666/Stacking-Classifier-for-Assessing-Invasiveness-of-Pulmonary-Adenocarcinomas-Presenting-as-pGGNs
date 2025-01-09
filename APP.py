@@ -22,9 +22,9 @@ st.sidebar.write("Features：")
 
 # 定义特征输入范围
 Radscore = st.sidebar.number_input( "Radscore:",min_value=-0.5, max_value=0.6, value=-0.251002483713187)
-Size = st.number_input("Tumor size:", min_value=0.0, max_value=30.0, value=7.62, step=0.01)
-CT_value = st.number_input("Mean CT value:", min_value=-800.0, max_value=0.0, value=-480.66, step=1.0)
-Age = st.number_input("Age:", min_value=21.0, max_value=100.0, value=64.0, step=1.0)
+Size = st.sidebar.number_input("Tumor size:", min_value=0.0, max_value=30.0, value=7.62, step=0.01)
+CT_value = st.sidebar.number_input("Mean CT value:", min_value=-800.0, max_value=0.0, value=-480.66, step=1.0)
+Age = st.sidebar.number_input("Age:", min_value=21.0, max_value=100.0, value=64.0, step=1.0)
 # 添加预测按钮 
 predict_button = st.sidebar.button("Predict")
 
