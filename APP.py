@@ -41,7 +41,7 @@ if predict_button:
         prediction = stacking_regressor.predict_proba(input_array)
 
         # 显示预测结果
-        print('prediction.shape=',prediction.shape)
+        #print('prediction.shape=',prediction.shape)
         st.success(f"Probability of outcome：{prediction[0][0]:.2f}")
     except Exception as e:
         st.error(f"error：{e}")
