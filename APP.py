@@ -38,10 +38,11 @@ if predict_button:
 
         # 模型预测
         #prediction = stacking_regressor.predict(input_array)[0]
-        prediction = stacking_regressor.predict_proba(input_array)[0][0]
+        prediction = stacking_regressor.predict_proba(input_array)
 
         # 显示预测结果
-        st.success(f"Probability of outcome：{prediction:.2f}")
+        st.success(f"Probability of outcome：{prediction.shape:.2f}")
+        st.success(f"Probability of outcome：{prediction[0][0]:.2f}")
     except Exception as e:
         st.error(f"error：{e}")
 
