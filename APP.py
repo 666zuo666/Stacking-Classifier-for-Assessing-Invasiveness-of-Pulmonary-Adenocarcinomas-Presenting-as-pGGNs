@@ -37,7 +37,8 @@ if predict_button:
         input_array = np.array([Radscore,Size,CT_value,Age]).reshape(1, -1)
 
         # 模型预测
-        prediction = stacking_regressor.predict(input_array)[0]
+        #prediction = stacking_regressor.predict(input_array)[0]
+        prediction = stacking_regressor.predict_proba(input_array)[0]
 
         # 显示预测结果
         st.success(f"Prediction result：{prediction:.2f}")
